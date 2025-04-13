@@ -1,16 +1,19 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getEntryBySlug } from "astro:content";
+import { getEntryBySlug, getCollection } from "astro:content";
 import { Markdown } from "astro/components";
 import { AstroError } from "astro/errors";
 
-const { slug } = Astro.params;
-const entry = await getEntryBySlug("blog", slug);
+export async function getStaticPaths() {
+  const articles = await getCollection("blog");
 
-if (!entry) {
-  throw new AstroError(`Article introuvable pour le slug : ${slug}`);
+  return articles.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
 }
 
+const { entry } = Astro.props;
 const { data, body } = entry;
 ---
 
