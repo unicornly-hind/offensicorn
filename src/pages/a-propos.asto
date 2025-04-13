@@ -1,1 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="À propos – Offensicorn">
+  <section>
+    <h1>À propos</h1>
+
+    <p>
+      Tout a commencé dans un club parascolaire. Un endroit un peu geek, un peu fou, où j’ai mis les mains dans la cybersécurité en dehors des cours magistraux à l’école.
+      J’étais curieuse, je voulais comprendre comment les choses fonctionnent. Et très vite, j’ai compris que ce que j’aimais vraiment, c’était tester les limites.
+      Voir ce qui se passe quand on pousse un peu plus loin. Quand on ne fait pas juste ce qu’on est censé faire.
+    </p>
+
+    <p>
+      Mon parcours m’a menée à explorer presque tous les recoins de la cybersécurité : l’architecture, les analyses de risques, l’organisationnel, le conseil en durcissement…
+      J’ai appris à lire un système, à l’analyser dans son ensemble, à comprendre les intentions derrière les choix techniques.
+      Mais il me manquait quelque chose. Cette étincelle que je retrouvais dans mes missions offensives : la liberté d’apprendre, de chercher, de surprendre.
+      Et surtout, de provoquer un réel changement.
+    </p>
+
+    <p>
+      C’est comme ça que je suis devenue pentesteuse à plein temps. Pas une exécutante qui coche des cases. Pas une spécialiste enfermée dans une techno.
+      Mais une consultante offensive qui apprend avant d’attaquer, qui creuse là où d’autres passent, et qui refuse de croire qu’un système est solide simplement parce qu’il a déjà été testé.
+    </p>
+
+    <p>
+      Je n’ai pas peur de ce que je ne connais pas. Au contraire : ce sont les technos que je découvre qui m’excitent le plus.
+      Je les approche comme si je devais les construire. Je m’imprègne de leur logique, de leurs limites, de leurs supposées certitudes. Et je cherche l’endroit où tout peut céder.
+    </p>
+
+    <p>
+      Pour moi, un bon pentest, c’est une simulation d’attaque. Pas une validation de conformité. Pas un audit mécanique.
+      Un vrai test. Qui dérange. Qui révèle. Qui apprend quelque chose à tout le monde, moi y compris.
+    </p>
+
+    <p>
+      Et c’est pour ça que je fais ce métier.
+    </p>
+  </section>
+</Layout>
 
