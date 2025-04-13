@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntryBySlug } from "astro:content";
+import { Markdown } from "astro/components";
+import { AstroError } from "astro/errors";
+
+const { slug } = Astro.params;
+const entry = await getEntryBySlug("blog", slug);
+
+if (!entry) {
+  throw new AstroError(`Article introuvable pour le slug : ${slug}`);
+}
+
+const { data, body } = entry;
+---
+
+<Layout title={`${data.title} – Blog`}>
+  <article class="blog-article">
+    {data.cover && <img src={data.cover} alt={data.title} class="blog-article-cover" />}
+    <h1 class="blog-article-title">{data.title}</h1>
+    <p class="blog-article-date">{new Date(data.pubDate).toLocaleDateString('fr-FR')}</p>
+    <Markdown class="blog-article-content">{body}</Markdown>
+    <div class="blog-article-footer">
+      <a href="/blog" class="button button--secondary">← Retour au blog</a>
+    </div>
+  </article>
+</Layout>
