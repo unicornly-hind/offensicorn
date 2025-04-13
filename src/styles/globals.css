@@ -153,3 +153,53 @@ footer {
 .muted {
   color: var(--muted);
 }
+
+.button {
+  display: inline-block;
+  background-color: var(--violet-dark);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--violet-light);
+}
+
+.button--secondary {
+  background-color: transparent;
+  border: 2px solid var(--violet-dark);
+  color: var(--violet-dark);
+}
+
+.button--secondary:hover {
+  background-color: var(--violet-dark);
+  color: white;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--violet-dark);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--pink);
+  margin-top: 0.5rem;
+}
+
+.blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--violet-light);
+  padding-left: 1rem;
+  color: var(--muted);
+  margin: 2rem 0;
+}
