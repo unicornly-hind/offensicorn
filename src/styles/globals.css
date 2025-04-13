@@ -221,10 +221,14 @@ footer {
 }
 
 .hero-nav a {
-  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: transparent;
   color: white;
-  text-decoration: none;
-  opacity: 0.9;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-nav a:hover,
