@@ -14,10 +14,10 @@ import "../styles/globals.css";
   <body>
 <header class="hero-header">
       <nav class="hero-nav">
-        <a href="/" class="active">Accueil</a>
-        <a href="/a-propos">À propos</a>
-        <a href="/art-de-dejouer">L’art de déjouer</a>
-        <a href="/blog">Blog</a>
+        <a href="/" class={Astro.url.pathname === "/" ? "active" : ""}>Accueil</a>
+        <a href="/a-propos" class={Astro.url.pathname === "/a-propos" ? "active" : ""}>À propos</a>
+        <a href="/art-de-dejouer" class={Astro.url.pathname === "/art-de-dejouer" ? "active" : ""}>L’art de déjouer</a>
+        <a href="/blog" class={Astro.url.pathname === "/blog" ? "active" : ""}>Blog</a>
       </nav>
     </header>
 
