@@ -5,7 +5,6 @@
   --green: #9aedb6;
   --pink: #f8abeb;
   --yellow: #f9a01b;
-
   --bg: #ffffff;
   --text: #1a1a1a;
   --muted: #666;
@@ -39,17 +38,9 @@ h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 2.4rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
+h1 { font-size: 2.4rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
 
 p {
   margin-bottom: 1.2rem;
@@ -71,51 +62,73 @@ a {
   font-weight: 500;
   transition: color 0.2s ease;
 }
-
 a:hover {
   color: var(--pink);
 }
 
-/* ---------- LAYOUT ---------- */
+/* ---------- SECTIONS ---------- */
 section {
   padding: 3rem 1rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* ---------- NAVIGATION ---------- */
-header nav {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 1.5rem 1rem;
-  background-color: #fdfdfd;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-header nav a {
-  color: var(--violet-dark);
-  font-weight: 500;
+/* ---------- HERO / HEADER ---------- */
+.hero-header {
+  background: url('/images/header-bg.png') no-repeat center center / cover;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  color: #ffffff;
   position: relative;
 }
 
-header nav a::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: var(--violet-light);
-  transition: width 0.3s;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
+.hero-content h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: white;
 }
 
-header nav a:hover::after {
-  width: 100%;
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #f0f0f0;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- NAVIGATION ---------- */
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-nav a {
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  opacity: 0.85;
+}
+
+.hero-nav a:hover,
+.hero-nav .active {
+  opacity: 1;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 /* ---------- FOOTER ---------- */
@@ -129,31 +142,7 @@ footer {
   border-top: 1px solid #eee;
 }
 
-/* ---------- UTILITY ---------- */
-.button {
-  display: inline-block;
-  background-color: var(--violet-dark);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-}
-
-.button:hover {
-  background-color: var(--violet-light);
-  color: #fff;
-}
-
-.center {
-  text-align: center;
-}
-
-.muted {
-  color: var(--muted);
-}
-
+/* ---------- BUTTONS ---------- */
 .button {
   display: inline-block;
   background-color: var(--violet-dark);
@@ -167,6 +156,7 @@ footer {
 
 .button:hover {
   background-color: var(--violet-light);
+  color: white;
 }
 
 .button--secondary {
@@ -180,81 +170,6 @@ footer {
   color: white;
 }
 
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: var(--violet-dark);
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--pink);
-  margin-top: 0.5rem;
-}
-
-.blockquote {
-  font-style: italic;
-  border-left: 4px solid var(--violet-light);
-  padding-left: 1rem;
-  color: var(--muted);
-  margin: 2rem 0;
-}
-
-.hero-header {
-  background: url('/images/header-bg.png') no-repeat center center / cover;
-  padding: 6rem 1rem 4rem;
-  text-align: center;
-  color: #ffffff;
-  position: relative;
-}
-
-.hero-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.hero-nav a {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1.5rem 1rem;
-  background-color: transparent;
-  color: white;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-nav a:hover,
-.hero-nav .active {
-  opacity: 1;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.hero-content h1 {
-  font-size: 2.8rem;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+/* ---------- UTILITIES ---------- */
+.center { text-align: center; }
+.muted { color: var(--muted); }
