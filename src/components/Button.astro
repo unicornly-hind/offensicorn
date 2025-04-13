@@ -1,15 +1,14 @@
 ---
-// Props : href (si lien) ou onClick (si action), type (primary, secondary)
-const { href = null, type = "primary", children } = Astro.props;
+const { href = null, type = "primary" } = Astro.props;
 const classes = type === "primary" ? "button" : "button button--secondary";
 ---
 
 {href ? (
   <a class={classes} href={href}>
-    {children}
+    <slot />
   </a>
 ) : (
   <button class={classes}>
-    {children}
+    <slot />
   </button>
 )}
