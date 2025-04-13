@@ -125,11 +125,13 @@ p {
 blockquote {
   font-style: italic;
   border-left: 4px solid var(--pink);
-  background: #fdf5fb;
-  padding: 1rem;
-  color: var(--violet-dark);
+  background: rgba(248, 171, 235, 0.2);
+  padding: 1rem 1.5rem;
+  color: #3a246b; /* plus foncé pour le contraste */
   margin: 2rem 0;
   border-radius: 6px;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 /* ---------- LIENS ---------- */
