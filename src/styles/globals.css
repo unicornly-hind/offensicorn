@@ -111,7 +111,7 @@ section {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 1.2rem 1rem;
   background-color: transparent;
   position: relative;
   z-index: 2;
@@ -120,22 +120,26 @@ section {
 .hero-nav a {
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--violet-dark); /* plus violet */
-  opacity: 0.9;
+  color: var(--violet-dark);
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
   transition: all 0.2s ease;
   text-decoration: none;
+  opacity: 0.85;
 }
 
 .hero-nav a:hover {
+  background-color: var(--violet-light);
+  color: white;
   opacity: 1;
-  text-decoration: underline;
 }
 
-/* seulement la page active */
 .hero-nav a.active {
+  background-color: var(--violet-dark);
+  color: white;
   font-weight: 700;
-  text-decoration: none;
-  color: var(--violet-dark);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* ---------- FOOTER ---------- */
