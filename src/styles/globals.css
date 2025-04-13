@@ -203,3 +203,54 @@ footer {
   color: var(--muted);
   margin: 2rem 0;
 }
+
+.hero-header {
+  background: url('/images/header-bg.png') no-repeat center center / cover;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-nav a {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.hero-nav a:hover,
+.hero-nav .active {
+  opacity: 1;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
