@@ -1,13 +1,13 @@
 /* ---------- VARIABLES ---------- */
 :root {
-  --violet-dark: #6141ac;     /* Titres, liens, boutons principaux */
-  --violet-light: #7f95e4;    /* Backgrounds doux, hover, accents */
-  --green: #9aedb6;           /* Validation, zones "safe", succès */
-  --pink: #f8abeb;            /* Créativité, citations, éléments artistiques */
-  --yellow: #f9a01b;          /* Appels à l'action, détails marquants */
-  --bg: #ffffff;              /* Fond clair */
-  --text: #1a1a1a;            /* Texte principal */
-  --muted: #666;              /* Texte secondaire */
+  --violet-dark: #6141ac;
+  --violet-light: #7f95e4;
+  --green: #9aedb6;
+  --pink: #f8abeb;
+  --yellow: #f9a01b;
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666;
 }
 
 /* ---------- RESET & TYPO ---------- */
@@ -28,6 +28,81 @@ body {
   background-color: var(--bg);
   color: var(--text);
   padding: 0;
+}
+
+/* ---------- HERO HEADER ---------- */
+.hero-header {
+  background: url('/images/header-bg.png') no-repeat center center / cover;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #f0f0f0;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- NAVIGATION ---------- */
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1.2rem 1rem;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-nav a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--violet-dark);
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.hero-nav a:hover {
+  background-color: var(--violet-light);
+  color: white;
+  opacity: 1;
+}
+
+.hero-nav a.active {
+  background-color: var(--violet-dark);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ---------- SIGNATURE TEXT ---------- */
+footer p {
+  color: var(--violet-dark);
+  font-weight: 500;
 }
 
 /* ---------- TITRES & PARAGRAPHES ---------- */
@@ -109,7 +184,6 @@ footer {
   padding: 2rem;
   text-align: center;
   background-color: #f9f9f9;
-  color: var(--muted);
   font-size: 0.9rem;
   border-top: 1px solid #eee;
 }
@@ -234,43 +308,6 @@ footer {
 .blog-article-footer {
   margin-top: 3rem;
   text-align: left;
-}
-
-/* ---------- NAVIGATION ---------- */
-.hero-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 1.2rem 1rem;
-  background-color: transparent;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-nav a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--violet-dark);
-  position: relative;
-  padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-  transition: all 0.2s ease;
-  text-decoration: none;
-  opacity: 0.85;
-}
-
-.hero-nav a:hover {
-  background-color: var(--violet-light);
-  color: white;
-  opacity: 1;
-}
-
-.hero-nav a.active {
-  background-color: var(--violet-dark);
-  color: white;
-  font-weight: 700;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* ---------- UTILITAIRES ---------- */
