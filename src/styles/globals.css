@@ -1,78 +1,155 @@
-@import 'tailwindcss';
+/* ---------- VARIABLES ---------- */
+:root {
+  --violet-dark: #6141ac;
+  --violet-light: #7f95e4;
+  --green: #9aedb6;
+  --pink: #f8abeb;
+  --yellow: #f9a01b;
 
-@theme {
-    --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --color-primary: #f67280;
-    --color-primary-content: #101828;
-    --color-complementary: #355c7d;
-    --background-image-noise: linear-gradient(
-            to bottom,
-            color-mix(in oklab, var(--color-gray-950) 0%, transparent),
-            color-mix(in oklab, var(--color-gray-950) 100%, transparent)
-        ),
-        url('/images/noise.png');
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666;
 }
 
-@layer base {
-    h1 {
-        @apply text-4xl font-bold tracking-tight sm:text-5xl;
-    }
-
-    h2 {
-        @apply text-2xl font-bold sm:text-3xl;
-    }
-
-    a:not(.btn) {
-        @apply underline transition hover:opacity-80;
-    }
-
-    pre {
-        @apply p-6 overflow-x-auto rounded-lg;
-    }
-
-    :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-gray-900 text-primary;
-        font-size: 0.9em;
-    }
+/* ---------- RESET & TYPO ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@layer components {
-    .markdown {
-        > * {
-            @apply my-6;
-        }
+html {
+  scroll-behavior: smooth;
+}
 
-        :where(h1, h2) {
-            @apply mt-12 mb-6;
-        }
+body {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 0;
+}
 
-        > :first-child {
-            @apply mt-0;
-        }
+/* ---------- TEXT ELEMENTS ---------- */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--violet-dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
 
-        > :last-child {
-            @apply mb-0;
-        }
-    }
+h1 {
+  font-size: 2.4rem;
+}
 
-    .btn {
-        @apply inline-flex items-center justify-center gap-2 bg-primary text-primary-content cursor-pointer text-center font-semibold no-underline transition-colors;
-        padding: var(--btn-py, 0.875rem) var(--btn-px, 1.25rem);
-        font-size: var(--btn-font-size, 0.875rem);
-        border-radius: var(--btn-border-radius, 0.25rem);
+h2 {
+  font-size: 1.8rem;
+}
 
-        &:hover {
-            @apply bg-primary/85;
-        }
+h3 {
+  font-size: 1.4rem;
+}
 
-        &:disabled {
-            @apply text-gray-400 bg-gray-700;
-        }
-    }
+p {
+  margin-bottom: 1.2rem;
+  max-width: 720px;
+}
 
-    .btn-lg {
-        --btn-font-size: 1.125rem;
-        --btn-px: 1.5rem;
-        --btn-py: 1.125rem;
-    }
+blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--violet-light);
+  padding-left: 1rem;
+  color: var(--muted);
+  margin: 2rem 0;
+}
+
+/* ---------- LINKS ---------- */
+a {
+  color: var(--violet-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+/* ---------- LAYOUT ---------- */
+section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------- NAVIGATION ---------- */
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header nav a {
+  color: var(--violet-dark);
+  font-weight: 500;
+  position: relative;
+}
+
+header nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--violet-light);
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+
+/* ---------- UTILITY ---------- */
+.button {
+  display: inline-block;
+  background-color: var(--violet-dark);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--violet-light);
+  color: #fff;
+}
+
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: var(--muted);
 }
