@@ -127,7 +127,7 @@ blockquote {
   border-left: 4px solid var(--pink);
   background: rgba(248, 171, 235, 0.2);
   padding: 1.2rem 1.5rem;
-  color: #3a246b;
+  color: var(--pink);
   margin: 2rem 0;
   border-radius: 6px;
   font-weight: 500;
