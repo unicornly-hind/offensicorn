@@ -33,8 +33,34 @@ It features:
 
 ---
 
-## 🚀 Getting started
+## 📁 Project Structure
 
 ```bash
-pnpm install
-pnpm dev
+src/
+├── components/       → Reusable UI blocks
+├── layouts/          → Page wrappers
+├── pages/            → Routes: /, /a-propos, /blog, /cv…
+├── content/          → Blog articles (.md)
+└── styles/           → global.css, palette, overrides
+```
+
+---
+
+## 💜 Philosophy
+
+> “Je ne cherche pas les vulnérabilités. Je cherche ce que vous n’avez pas pensé à protéger.”
+
+This site isn’t just a portfolio — it’s a statement.  
+It reflects a mindset, a curiosity, and the art of breaking limits.
+
+---
+
+## 🔒 License
+
+This is a personal project, not intended for reuse or duplication.  
+Feel free to be inspired — just don’t clone.
+
+---
+
+## 👩‍💻 Made with heart by [Hind](https://github.com/unicornly-hind)
+=======

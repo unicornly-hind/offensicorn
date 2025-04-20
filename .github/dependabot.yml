@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly" # possible: daily, weekly, monthly
+    commit-message:
+      prefix: "chore(deps)"
+    open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "@types/*" # évite de polluer avec des mises à jour mineures
