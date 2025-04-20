@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const articles = await getCollection("blog");
+---
+
+<Layout title="Blog – Offensicorn">
+  <section class="blog-section">
+    <h1 class="section-title">Articles</h1>
+
+    <div class="blog-grid">
+      {articles.map(article => (
+        <a class="blog-card" href={`/blog/${article.slug}`}>
+          {article.data.cover && <img src={article.data.cover} alt={article.data.title} />}
+          <h2>{article.data.title}</h2>
+          <p class="blog-date">{new Date(article.data.pubDate).toLocaleDateString('fr-FR')}</p>
+          <p class="blog-description">{article.data.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

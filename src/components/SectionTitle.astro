@@ -1,0 +1,8 @@
+---
+const { level = 2, children } = Astro.props;
+const Tag = `h${level}`;
+---
+
+<Tag class="section-title">
+  {children}
+</Tag>
