@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getEntryBySlug, getCollection, Markdown } from "astro:content";
+import { getEntryBySlug, getCollection, Content } from "astro:content";
 import { AstroError } from "astro/errors";
 
 export async function getStaticPaths() {
@@ -21,7 +21,7 @@ const { data, body } = entry;
     {data.cover && <img src={data.cover} alt={data.title} class="blog-article-cover" />}
     <h1 class="blog-article-title">{data.title}</h1>
     <p class="blog-article-date">{new Date(data.pubDate).toLocaleDateString('fr-FR')}</p>
-    <Markdown class="blog-article-content">{body}</Markdown>
+    <Content class="blog-article-content">{body}</Markdown>
     <div class="blog-article-footer">
       <a href="/blog" class="button button--secondary">← Retour au blog</a>
     </div>
