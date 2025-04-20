@@ -1,51 +1,40 @@
-# Astro on Netlify Platform Starter
+# 🦄 Offensicorn
 
-[Live Demo](https://astro-platform-starter.netlify.app/)
+A personal website and creative CV for a cybersecurity consultant who thinks like an attacker — and builds like an artist.
 
-A modern starter based on Astro.js, Tailwind, and [Netlify Core Primitives](https://docs.netlify.com/core/overview/#develop) (Edge Functions, Image CDN, Blob Store).
+---
 
-## Astro Commands
+## 🌐 Live site
 
-All commands are run from the root of the project, from a terminal:
+[https://offensicorn.hindrahali.fr](https://offensicorn.hindrahali.fr) *(soon)*
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## Deploying to Netlify
+## ✨ About the project
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/astro-platform-starter)
+This site is powered by [Astro](https://astro.build), styled with Tailwind CSS, and deployed via [Netlify](https://netlify.com).  
+It features:
 
-## Developing Locally
+- A personal homepage with strong visual identity
+- A custom CV page (“Parcours”) with storytelling flair
+- A blog that bridges technical offensive topics with creative expression
+- A reusable component system and a soft pastel color palette
+- A philosophy-driven structure: art meets pentest
 
-| Prerequisites                                                                |
-| :--------------------------------------------------------------------------- |
-| [Node.js](https://nodejs.org/) v18.14+.                                      |
-| (optional) [nvm](https://github.com/nvm-sh/nvm) for Node version management. |
+---
 
-1. Clone this repository, then run `npm install` in its root directory.
+## 🛠 Tech Stack
 
-2. For the starter to have full functionality locally (e.g. edge functions, blob store), please ensure you have an up-to-date version of Netlify CLI. Run:
+- **Astro** – static site generator
+- **Tailwind CSS** – utility-first CSS framework
+- **Markdown** – for blog articles
+- **Netlify** – hosting and continuous deployment
+- **Content Collections** – structured content management via `astro:content`
 
-```
-npm install netlify-cli@latest -g
-```
+---
 
-3. Link your local repository to the deployed Netlify site. This will ensure you're using the same runtime version for both local development and your deployed site.
+## 🚀 Getting started
 
-```
-netlify link
-```
-
-4. Then, run the Astro.js development server via Netlify CLI:
-
-```
-netlify dev
-```
-
-If your browser doesn't navigate to the site automatically, visit [localhost:8888](http://localhost:8888).
+```bash
+pnpm install
+pnpm dev
