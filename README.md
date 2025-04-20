@@ -35,12 +35,14 @@ It features:
 
 ## 📁 Project Structure
 
+```bash
 src/
 ├── components/       → Reusable UI blocks
 ├── layouts/          → Page wrappers
 ├── pages/            → Routes: /, /a-propos, /blog, /cv…
 ├── content/          → Blog articles (.md)
 └── styles/           → global.css, palette, overrides
+```
 
 ---
 
