@@ -1,27 +1,26 @@
 ---
 // src/pages/index.astro
-import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
-import SectionTitle from "../components/SectionTitle.astro";
-import Blockquote from "../components/Blockquote.astro";
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import blockquote from '../components/blockquote.astro';
 ---
 
 <Layout title="Accueil – Offensicorn">
-  <section>
-    <h1>Je teste les limites pour mieux comprendre.<br />Je cherche ce que personne ne pense à protéger.</h1>
-    <p>
-      Je ne me contente pas de chercher des failles connues. J’apprends chaque environnement, je pense comme une attaquante, et je déconstruis les logiques prévisibles.
-      Je ne cherche pas seulement les vulnérabilités dans les systèmes, mais dans les raisonnements. Parce que ce qu’on ne remet jamais en question est souvent ce qui finit par céder.
-    </p>
-    <div style="margin-top: 2rem;">
-      <Button href="/a-propos">En savoir plus</Button>
-      <Button href="/blog" type="secondary">Lire le blog</Button>
-    </div>
-  </section>
+    <section>
+        <h1>Je teste les limites pour mieux comprendre.<br />Je cherche ce que personne ne pense à protéger.</h1>
+        <p>
+            Je ne me contente pas de chercher des failles connues. J’apprends chaque environnement, je pense comme une attaquante, et je déconstruis les
+            logiques prévisibles. Je ne cherche pas seulement les vulnérabilités dans les systèmes, mais dans les raisonnements. Parce que ce qu’on ne remet
+            jamais en question est souvent ce qui finit par céder.
+        </p>
+        <div style="margin-top: 2rem;">
+            <Button href="/a-propos">En savoir plus</Button>
+            <Button href="/blog" type="secondary">Lire le blog</Button>
+        </div>
+    </section>
 
-  <section>
-    <blockquote>
-      “Tester les limites, c’est refuser de croire qu’elles sont là pour de bon.”
-    </blockquote>
-  </section>
+    <section>
+        <blockquote>“Tester les limites, c’est refuser de croire qu’elles sont là pour de bon.”</blockquote>
+    </section>
 </Layout>

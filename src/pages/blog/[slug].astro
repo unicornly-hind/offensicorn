@@ -1,15 +1,14 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { getEntryBySlug, getCollection, Content } from "astro:content";
-import { AstroError } from "astro/errors";
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, Content } from 'astro:content';
 
 export async function getStaticPaths() {
-  const articles = await getCollection("blog");
+    const articles = await getCollection('blog');
 
-  return articles.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry }
-  }));
+    return articles.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry }
+    }));
 }
 
 const { entry } = Astro.props;
@@ -17,13 +16,13 @@ const { data, body } = entry;
 ---
 
 <Layout title={`${data.title} – Blog`}>
-  <article class="blog-article">
-    {data.cover && <img src={data.cover} alt={data.title} class="blog-article-cover" />}
-    <h1 class="blog-article-title">{data.title}</h1>
-    <p class="blog-article-date">{new Date(data.pubDate).toLocaleDateString('fr-FR')}</p>
-    <Content class="blog-article-content">{body}</Markdown>
-    <div class="blog-article-footer">
-      <a href="/blog" class="button button--secondary">← Retour au blog</a>
-    </div>
-  </article>
+    <article class="blog-article">
+        {data.cover && <img src={data.cover} alt={data.title} class="blog-article-cover" />}
+        <h1 class="blog-article-title">{data.title}</h1>
+        <p class="blog-article-date">{new Date(data.pubDate).toLocaleDateString('fr-FR')}</p>
+        <Content class="blog-article-content">{body}</Content>
+        <div class="blog-article-footer">
+            <a href="/blog" class="button button--secondary">← Retour au blog</a>
+        </div>
+    </article>
 </Layout>

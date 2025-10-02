@@ -1,34 +1,49 @@
 ---
 // src/layouts/Layout.astro
-const { title = "Offensicorn – Hind", description = "" } = Astro.props;
-import "../styles/globals.css";
+import Icon from 'astro-icon/components/Icon.astro';
+
+const { title = 'Offensicorn – Hind', description = '' } = Astro.props;
+
+import '../styles/globals.css';
 ---
 
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <title>{title}</title>
-  </head>
-  <body>
-<header class="hero-header">
-      <nav class="hero-nav">
-        <a href="/" class={Astro.url.pathname === "/" ? "active" : ""}>Accueil</a>
-        <a href="/a-propos" class={Astro.url.pathname === "/a-propos" ? "active" : ""}>À propos</a>
-        <a href="/art-de-dejouer" class={Astro.url.pathname === "/art-de-dejouer" ? "active" : ""}>L’art de déjouer</a>
-        <a href="/cv" class={Astro.url.pathname === "/cv" ? "active" : ""}>Parcours</a>
-        <a href="/blog" class={Astro.url.pathname === "/blog" ? "active" : ""}>Blog</a>
-        <a href="/contact" class={Astro.url.pathname === "/contact" ? "active" : ""}>Contact</a>
-      </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+        <link rel="icon" type="image/png" href="/public/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+        <link rel="shortcut icon" href="/public/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Offensicorn" />
+        <link rel="manifest" href="/public/site.webmanifest" />
+    </head>
+    <body>
+        <header class="hero-header">
+            <div class="flex justify-center items-center gap-4 flex-wrap">
+                <a href="/" class="flex items-center gap-2">
+                    <Icon name="logomark" width="60" />
+                    <span class="sr-only">Accueil</span>
+                </a>
+                <nav class="hero-nav">
+                    <a href="/" class={Astro.url.pathname === '/' ? 'active' : ''}>Accueil</a>
+                    <a href="/a-propos" class={Astro.url.pathname === '/a-propos' ? 'active' : ''}>À propos</a>
+                    <a href="/art-de-dejouer" class={Astro.url.pathname === '/art-de-dejouer' ? 'active' : ''}>L’art de déjouer</a>
+                    <a href="/cv" class={Astro.url.pathname === '/cv' ? 'active' : ''}>Parcours</a>
+                    <a href="/blog" class={Astro.url.pathname === '/blog' ? 'active' : ''}>Blog</a>
+                    <a href="/contact" class={Astro.url.pathname === '/contact' ? 'active' : ''}>Contact</a>
+                </nav>
+            </div>
+        </header>
 
-    <main>
-      <slot />
-    </main>
+        <main>
+            <slot />
+        </main>
 
-    <footer>
-      <p>© {new Date().getFullYear()} Hind – Offensicorn 🦄</p>
-    </footer>
-  </body>
+        <footer>
+            <p>© {new Date().getFullYear()} Hind – Offensicorn 🦄</p>
+        </footer>
+    </body>
 </html>
