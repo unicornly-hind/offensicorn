@@ -1,49 +1,93 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import '../styles/globals.css';
 ---
 
 <Layout title="Parcours – Offensicorn">
-  <section class="cv-section">
-    <h1 class="section-title">Parcours</h1>
+    <section class="cv-section">
+        <h1 class="text-center text-3xl mb-10 text-[var(--violet-dark)]">Parcours</h1>
 
-    <div class="cv-block">
-      <h2>Expérience</h2>
-      <ul>
-        <li>
-          <strong>Consultante senior en cybersécurité offensive</strong><br />
-          Cabinet de conseil – 2022 à aujourd’hui<br />
-          Pentests Web, Infra, Cloud, audit de code, durcissements, architecture.
-        </li>
-        <li>
-          <strong>Consultante cybersécurité (défensive + fonctionnelle)</strong><br />
-          Conseil, Secure Coding, guides de durcissement, analyse de risques.
-        </li>
-      </ul>
-    </div>
+        <div class="space-y-10">
+            <!-- Timeline: Expériences -->
+            <div class="relative border-l-4 border-[var(--violet-dark)] pl-6">
+                <h2>Expérience</h2>
 
-    <div class="cv-block">
-      <h2>Formation</h2>
-      <ul>
-        <li>
-          <strong>Diplôme d’ingénieur</strong> – Spécialité cybersécurité<br />
-          École d’ingénieurs, France – Années XXXX–YYYY
-        </li>
-        <li>
-          <strong>Formations continues</strong> (Cloud, OCPP, Offensive tooling, etc.)
-        </li>
-      </ul>
-    </div>
+                <div class="mb-8">
+                    <h3>Consultante senior en cybersécurité offensive</h3>
+                    <span
+                        ><b
+                            >SERMA Safety & Security, Paris
+                            <span class="text-sm text-[var(--yellow)] font-medium mb-2">| 2023 – Aujourd’hui</span></b
+                        ></span
+                    >
+                    <p class="text-sm text-[var(--muted)] italic mb-2">
+                        J’aide les entreprises à anticiper les menaces et améliorer leur posture sécurité via des audits ciblés et des conseils adaptés.
+                    </p>
+                    <ul class="list-disc list-inside mt-2 text-[var(--text)]">
+                        <li>✨ Audits de sécurité Web, Infrastructure, Cloud, OPC UA, Interne</li>
+                        <li>🪡 Recommandations personnalisées, adaptées au métier</li>
+                        <li>💬 Formations et sensibilisation à la sécurité offensive</li>
+                    </ul>
+                </div>
 
-    <div class="cv-block">
-      <h2>Compétences clés</h2>
-      <ul>
-        <li>Pentest (Web, Infra, Cloud, interne)</li>
-        <li>Audit de configuration, revue de code</li>
-        <li>Architecture sécurisée & durcissement</li>
-        <li>Approche offensive + conseil stratégique</li>
-        <li>Créativité, veille, adaptation rapide</li>
-      </ul>
-    </div>
-  </section>
+                <div class="mb-8">
+                    <h3>Consultante senior en cybersécurité offensive</h3>
+                    <span
+                        ><b
+                            >HOLISEUM, Paris
+                            <span>| 2021 – 2023</span></b
+                        ></span
+                    >
+                    <p class="text-sm text-[var(--muted)] italic mb-2">
+                        J’ai piloté des missions techniques et amélioré les offres d’audit tout en accompagnant des clients aux profils variés.
+                    </p>
+                    <ul class="list-disc list-inside mt-2 text-[var(--text)]">
+                        <li>🚀 TI web, interne, industriel, Azure Cloud</li>
+                        <li>📊 Pilotage de projets Azure, kick-off, référence technique</li>
+                        <li>📄 Audit de configuration OS, SGBD, conteneurs, virtualisation</li>
+                    </ul>
+                </div>
+
+                <div class="mb-8 p-4 border border-[var(--violet-dark)] rounded-lg bg-[color-mix(in srgb, var(--green) 20%, transparent)]">
+                    <h3>Consultante en cybersécurité</h3>
+                    <span
+                        ><b
+                            >EY, Casablanca
+                            <span>| 2017 – 2021</span></b
+                        ></span
+                    >
+                    <p class="text-sm text-[var(--muted)] italic mb-2">
+                        J’ai exploré tous les aspects de la sécurité : veille, architecture, durcissement et audit, en alliant rigueur et créativité.
+                    </p>
+                    <ul class="list-disc list-inside ml-2 text-[var(--text)]">
+                        <li>🔎 Veille, benchmark, choix logiciels</li>
+                        <li>📚 Guides de durcissement & dév. sécurisé</li>
+                        <li>📆 Formations techniques, audits d'architecture, code backend</li>
+                    </ul>
+                </div>
+            </div>
+            <br /><br />
+            <!-- Formation -->
+            <div>
+                <h2>Formation</h2>
+                <ul class="list-disc list-inside text-[var(--text)]">
+                    <li>🎓 Diplôme d’ingénieur Réseaux et Sécurité des SI — INPT, Maroc (2017)</li>
+                    <li>🔬 Formations continues : Azure, AWS, ICS, outils offensifs (Burp, etc.)</li>
+                </ul>
+            </div>
+
+            <!-- Compétences clés -->
+            <br /><br />
+            <div>
+                <h2>Compétences clés</h2>
+                <ul class="grid grid-cols-2 gap-x-4 list-disc list-inside text-[var(--text)]">
+                    <li>🌐 Pentest (Web, Infra, Cloud, Interne)</li>
+                    <li>📃 Audit de configuration, revue de code</li>
+                    <li>🏰 Architecture sécurisée & durcissement</li>
+                    <li>🔮 Stratégie offensive + conseil client</li>
+                    <li>🔍 Curiosité, veille, capacité à apprendre vite</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </Layout>
-

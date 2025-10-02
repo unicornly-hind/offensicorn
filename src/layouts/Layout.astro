@@ -1,6 +1,6 @@
 ---
 // src/layouts/Layout.astro
-import Icon from 'astro-icon/components/Icon.astro';
+import { Icon } from 'astro-icon/components';
 
 const { title = 'Offensicorn – Hind', description = '' } = Astro.props;
 
@@ -24,8 +24,8 @@ import '../styles/globals.css';
         <header class="hero-header">
             <div class="flex justify-center items-center gap-4 flex-wrap">
                 <a href="/" class="flex items-center gap-2">
-                    <Icon name="logomark" width="60" />
-                    <span class="sr-only">Accueil</span>
+                    <!-- <Icon name="custom:logomark" width="60" /> -->
+                    <!-- <span class="sr-only">Accueil</span> -->
                 </a>
                 <nav class="hero-nav">
                     <a href="/" class={Astro.url.pathname === '/' ? 'active' : ''}>Accueil</a>
